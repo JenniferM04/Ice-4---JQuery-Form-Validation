@@ -89,20 +89,22 @@ $(function ()
         $(paragraphs).each(function()
         {
             // if it has toggleHide class
-            //if ()
-            //{
-                // if it has toggleHide class
+            if ($(this).attr("class") == "toggleHide")
+            {
                 //remove toggleHide class and add toggleShow class
-                // styling is controlled in the css
-            //}
-            //else
-            //{
-                // otherwise assume it has the toggleShow class
+                $(this).attr("class", "toggleShow");
+                 //styling is controlled in the css
+                 $(this).show();
+            } else
+            {
+                $(this).attr("class", "toggleHide");
+                //otherwise assume it has the toggleShow class
+                $(this).hide();
                 //remove toggleShow and add toggleHide
-            //}
+            }
 
-        })
-    })
+        });
+    });
 
 });
 
